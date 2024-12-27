@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box{
+        width: 400px;
+        height: 400px;
+        background-color: violet;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box:hover{
+        box-shadow: 10px 10px 10px yellow;
+    }
+    .box1{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: brown;
+        animation-name: example;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-direction: normal;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes example{
+        0%{
+            top:0px;
+            left: 0px;
+        }
+        25%{
+            top:0px;
+            left: 340px;
+            transform: rotate(360deg);
+            background-color: aqua;
+        }
+        50%{
+            top:340px;
+            left: 340px;
+            transform: rotate(0deg);
+            background-color: burlywood;
+        }
+        75%{
+            top:340px;
+            left:0px;
+            transform: rotate(360deg);
+            background-color: chartreuse;
+        }
+        100%{
+            top:0px;
+            left:0px;
+            transform: rotate(0deg);
+            background-color: cornflowerblue;
+        }
+    }
+    p{
+        text-align: center;
+    }
+    h1{
+        text-align: center;  
+    }
+    h1:hover{
+        text-shadow: 10px 10px lime;
+    }
+</style>
+<body>
+    <div class="box">
+        <h1>Animation</h1>
+        <div class="box1">
+            <p>Hi Raja!</p>
+        </div>
+    </div>
+</body>
+</html>
